@@ -62,6 +62,9 @@ async def lifespan(app: FastAPI):
     logger.info("=" * 60)
     logger.info("🚀 RapidReportz Backend Starting Up")
     logger.info("=" * 60)
+    yield
+    logger.info("🛑 RapidReportz Backend Shutting Down")
+    app = FastAPI(title="RapidReportz API", lifespan=lifespan)
     
     # Verify database connection
     try:
