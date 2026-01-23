@@ -148,6 +148,8 @@ import secrets
 
 # CORS Configuration
 ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "").split(",") if os.getenv("ALLOWED_ORIGINS") else [
+    "https://rapidreportz.com",
+    "https://www.rapidreportz.com",
     "http://localhost:3000",
     "http://localhost:3001",
     "http://localhost:5173",
